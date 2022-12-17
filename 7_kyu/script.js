@@ -23,8 +23,21 @@ function getCount(str) {
 
 // Disemvowel Trolls
 
-//Your task is to write a function that takes a string and return a new string with all vowels removed.
+// Your task is to write a function that takes a string and return a new string with all vowels removed.
 
 function disemvowel(str) {
   return str.replace(/[aeiou]/gi, '');
+}
+
+// Square Every Digit
+
+// For example, if we run 9119 through the function, 811181 will come out, because 92 is 81 and 12 is 1.
+
+function squareDigits(num) {
+  return Number(
+    ('' + num)
+      .split('')
+      .map((cur) => Math.pow(cur, 2))
+      .join('')
+  );
 }
