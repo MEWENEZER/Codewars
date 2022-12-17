@@ -40,3 +40,10 @@ function positiveSum(arr) {
 function solution(str) {
   return str.split('').reverse().join('');
 }
+
+// Complete the method that takes a boolean value and return a string for ,
+// or a string for ."Yes"true"No"false
+
+function boolToWord(bool) {
+  return bool ? 'Yes' : 'No';
+}
