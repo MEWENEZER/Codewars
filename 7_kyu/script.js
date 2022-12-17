@@ -5,16 +5,20 @@
 // The input string will only consist of lower case letters and/or spaces.
 
 function getCount(str) {
-  let vowels = ['a', 'e', 'i', 'o', 'u'];
-  let count = 0;
+  //   let vowels = ['a', 'e', 'i', 'o', 'u'];
+  //   let count = 0;
 
-  for (let letter of str.split('')) {
-    for (let word of vowels) {
-      if (letter == word) {
-        count++;
-      }
-    }
-  }
+  //   for (let letter of str.split('')) {
+  //     for (let word of vowels) {
+  //       if (letter == word) {
+  //         count++;
+  //       }
+  //     }
+  //   }
 
-  return count;
+  //   return count;
+
+  return (str.match(/[aeiou]/gi) || []).length;
 }
+
+console.log(getCount('abracadabra'));
