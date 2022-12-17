@@ -36,6 +36,7 @@ function disemvowel(str) {
 function squareDigits(num) {
   return Number(
     ('' + num)
+      // String(num)
       .split('')
       .map((cur) => Math.pow(cur, 2))
       .join('')
@@ -59,4 +60,25 @@ function highAndLow(numbers) {
   return `${Math.max(...numbers)} ${Math.min(...numbers)}`;
 }
 
-console.log(highAndLow('1 2 3 4 5'));
+// Descending Order
+
+// Your task is to make a function that can take any non-negative integer
+// as an argument and return it with its digits in descending order.
+// Essentially, rearrange the digits to create the highest possible number.
+
+// Input: 42145 Output: 54421
+// Input: 145263 Output: 654321
+// Input: 123456789 Output: 987654321
+
+function descendingOrder(n) {
+  return (
+    String(n)
+      .split('')
+      // .sort((a, b) => b - a)
+      .sort()
+      .reverse()
+      .join('')
+  );
+}
+
+console.log(descendingOrder(145263));
