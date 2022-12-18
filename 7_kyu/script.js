@@ -81,4 +81,12 @@ function descendingOrder(n) {
   );
 }
 
-console.log(descendingOrder(145263));
+// You're a square!
+
+// isSquare   3  // => false
+// isSquare   4  // => true
+// isSquare  25  // => true
+
+var isSquare = function (n) {
+  return Number.isInteger(Math.sqrt(n));
+};
