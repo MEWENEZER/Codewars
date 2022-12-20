@@ -89,6 +89,7 @@ function descendingOrder(n) {
 
 var isSquare = function (n) {
   return Number.isInteger(Math.sqrt(n));
+  // Number.isInteger() method determines whether the passed value is an integer.
 };
 
 // List Filtering
