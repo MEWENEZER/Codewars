@@ -106,4 +106,28 @@ function filter_list(l) {
   // filter returns an array of all matching elements
 }
 
-console.log(filter_list([1, 2, 'aasf', '1', '123', 123])); // [1, 2, 123]
+// Credit Card Mask
+
+// "4556364607935616" --> "############5616"
+// "64607935616" -->      "#######5616"
+// "1" -->                "1"
+//  "" -->                 ""
+// "Skippy" --> "##ippy"
+
+// return masked string
+function maskify(cc) {
+  // let arr = cc.split('');
+
+  // for (let i = 0; i < arr.length - 4; i++) {
+  //   arr[i] = '#';
+  // }
+
+  // return arr.join('');
+
+  return cc
+    .split('')
+    .map((cur, index, array) => (array.length - index > 4 ? (cur = '#') : cur))
+    .join('');
+}
+
+console.log(maskify('654321'));
