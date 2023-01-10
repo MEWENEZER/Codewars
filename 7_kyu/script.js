@@ -137,4 +137,25 @@ function smallEnough(a, limit) {
   return Math.max(...a) <= limit;
 }
 
-console.log(smallEnough([101, 45, 75, 105, 99, 107], 107)); // true
+// Examples:(Input --> Output)
+// 1 --> 1 --> "1.00"
+// 2 --> 1 + 1/4 --> "1.25"
+// 5 --> 1 + 1/4 + 1/7 + 1/10 + 1/13 --> "1.57"
+
+function SeriesSum(n) {
+  let result = 0;
+  let div = 1;
+
+  for (let i = 0; i < n; i++) {
+    if (i == 0) {
+      result = 1;
+    } else {
+      div += 3;
+      result += 1 / div;
+    }
+  }
+
+  return result.toFixed(2);
+}
+
+console.log(SeriesSum(5)); // 1.57
