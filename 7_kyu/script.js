@@ -158,4 +158,12 @@ function SeriesSum(n) {
   return result.toFixed(2);
 }
 
-console.log(SeriesSum(5)); // 1.57
+// ["a", "b", "c"] --> ["1: a", "2: b", "3: c"]
+
+function meow(array) {
+  return array.length == 0
+    ? []
+    : array.map((element, index) => {
+        return `${index + 1}: ${element}`;
+      });
+}
