@@ -157,6 +157,7 @@ function SeriesSum(n) {
 
   return result.toFixed(2);
 }
+<<<<<<< Updated upstream
 
 // ["a", "b", "c"] --> ["1: a", "2: b", "3: c"]
 
@@ -167,3 +168,5 @@ function meow(array) {
         return `${index + 1}: ${element}`;
       });
 }
+=======
+>>>>>>> Stashed changes
