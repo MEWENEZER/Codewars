@@ -130,4 +130,44 @@ function maskify(cc) {
     .join('');
 }
 
+<<<<<<< Updated upstream
 console.log(maskify('654321'));
+=======
+// You must check that all values in the array are below or equal to the limit value.
+// If they are, return true. Else, return false.
+
+function smallEnough(a, limit) {
+  return Math.max(...a) <= limit;
+}
+
+// Examples:(Input --> Output)
+// 1 --> 1 --> "1.00"
+// 2 --> 1 + 1/4 --> "1.25"
+// 5 --> 1 + 1/4 + 1/7 + 1/10 + 1/13 --> "1.57"
+
+function SeriesSum(n) {
+  let result = 0;
+  let div = 1;
+
+  for (let i = 0; i < n; i++) {
+    if (i == 0) {
+      result = 1;
+    } else {
+      div += 3;
+      result += 1 / div;
+    }
+  }
+
+  return result.toFixed(2);
+}
+
+// ["a", "b", "c"] --> ["1: a", "2: b", "3: c"]
+
+function meow(array) {
+  return array.length == 0
+    ? []
+    : array.map((element, index) => {
+        return `${++index}: ${element}`;
+      });
+}
+>>>>>>> Stashed changes
