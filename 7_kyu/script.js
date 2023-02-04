@@ -157,16 +157,36 @@ function SeriesSum(n) {
 
   return result.toFixed(2);
 }
-<<<<<<< Updated upstream
+//<!--<<<<<<< Updated upstream-->
 
-// ["a", "b", "c"] --> ["1: a", "2: b", "3: c"]
+//<!--// ["a", "b", "c"] &ndash;&gt; ["1: a", "2: b", "3: c"]-->
+//
+//<!--function meow(array) {-->
+//<!--  return array.length == 0-->
+//<!--    ? []-->
+//<!--    : array.map((element, index) => {-->
+//<!--        return `${index + 1}: ${element}`;-->
+//<!--      });-->
+//<!--}-->
+//<!--=======-->
+//<!-->>>>>>> Stashed changes-->
 
-function meow(array) {
-  return array.length == 0
-    ? []
-    : array.map((element, index) => {
-        return `${index + 1}: ${element}`;
-      });
+// Count the divisors of a number
+//4 --> 3 (1, 2, 4)
+//5 --> 2 (1, 5)
+//12 --> 6 (1, 2, 3, 4, 6, 12)
+//30 --> 8 (1, 2, 3, 5, 6, 10, 15, 30)
+
+function getDivisorsCnt(n){
+    let result = 0;
+
+    for (let i = 1; i <= n; i++) {
+        if (n % i == 0) {
+            result++;
+        }
+    }
+
+    return result;
 }
-=======
->>>>>>> Stashed changes
+
+console.log(getDivisorsCnt(12))
