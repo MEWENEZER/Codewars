@@ -41,6 +41,30 @@ function spinWords(string) {
     }).join(' ')
 }
 
-console.log(spinWords('Hey fellow warriors'))
+// console.log(spinWords('Hey fellow warriors'))
 
-// module.exports = solution;
+// Given an array of integers, find the one that appears an odd number of times.
+
+/**
+ *
+ * @param A {array}
+ * @return {number}
+ */
+function findOdd(A) {
+    return A.reduce((item, index) => item ^ index, 0)
+}
+
+// createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]) // => returns "(123) 456-7890"
+
+/**
+ *
+ * @param arr {array}
+ * @return {string}
+ */
+function createPhoneNumber(arr) {
+    return arr.reduce((p,c) => p.replace('x',c), "(xxx) xxx-xxxx");
+}
+
+createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0])
+
+module.exports = findOdd;
