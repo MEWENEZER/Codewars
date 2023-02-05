@@ -28,6 +28,19 @@ function solution(number){
     return 0;
 }
 
-(solution(870))
+// Write a function that takes in a string of one or more words, and returns the same string, but with all five or more letter words reversed
 
-module.exports = solution;
+/**
+ *
+ * @param string {string}
+ * @return {string}
+ */
+function spinWords(string) {
+    return string.split(' ').map((item) => {
+        return (item.length >= 5) ? item.split('').reverse().join('') : item;
+    }).join(' ')
+}
+
+console.log(spinWords('Hey fellow warriors'))
+
+// module.exports = solution;
